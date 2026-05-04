@@ -1,0 +1,739 @@
+/* ================================
+   LUXURY OLD ACADEMIA WEBSITE STYLE
+================================ */
+
+:root {
+    --blackberry: #4D0135;
+    --meadow-flower: #73C6B6;
+    --pediment: #C3B091;
+    --kurobeni: #23191E;
+    --copper-moon: #B87333;
+    --moscow-midnight: #191970;
+  
+    --bg: #f8f4ec;
+    --bg-soft: #efe7dc;
+    --surface: #fffaf2;
+    --text: var(--kurobeni);
+    --muted: #6f6564;
+    --border: #d8cab5;
+  
+    --heading-font: "Cormorant Garamond", Georgia, serif;
+    --body-font: "Inter", Arial, sans-serif;
+  
+    --page-margin: clamp(24px, 5vw, 72px);
+    --max-width: 1180px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body-font);
+    line-height: 1.7;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .page-shell {
+    width: min(var(--max-width), calc(100% - (var(--page-margin) * 2)));
+    margin: 0 auto;
+  }
+  
+  /* ================================
+     NAVIGATION
+  ================================ */
+  
+  .site-header {
+    padding: 32px var(--page-margin) 0;
+  }
+  
+  .nav {
+    width: min(var(--max-width), 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .logo {
+    font-family: var(--heading-font);
+    font-size: 1.45rem;
+    color: var(--blackberry);
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  
+  .nav-links a {
+    position: relative;
+    padding-bottom: 6px;
+    border-bottom: 1px solid transparent;
+    transition: 0.28s ease;
+  }
+  
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: var(--blackberry);
+    transition: width 0.28s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--blackberry);
+  }
+  
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+    width: 100%;
+  }
+  
+  .meeting-link {
+    color: var(--copper-moon);
+    font-size: 0.78rem;
+    font-weight: 600;
+    transition: 0.28s ease;
+  }
+  
+  .meeting-link:hover {
+    color: var(--blackberry);
+    letter-spacing: 0.04em;
+  }
+  
+  /* ================================
+     BUTTONS / DETAILS
+  ================================ */
+  
+  .btn {
+    display: inline-flex;
+    background: var(--copper-moon);
+    color: white;
+    padding: 14px 28px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: 0.28s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--blackberry);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(77, 1, 53, 0.16);
+  }
+  
+  .small-rule,
+  .title-line,
+  .page-title::after {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 1px;
+    background: var(--blackberry);
+    margin-top: 18px;
+  }
+  
+  .large-rule {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 56px;
+  }
+  
+  .ornament {
+    color: var(--copper-moon);
+    font-size: 1.4rem;
+    margin-bottom: 26px;
+  }
+  
+  /* ================================
+     HOME PAGE
+  ================================ */
+  
+  /* Title now sits ABOVE the image + value statement row */
+  .home-title {
+    padding: 86px 0 18px;
+  }
+  
+  .home-title h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(4.4rem, 9vw, 8rem);
+    line-height: 0.88;
+    color: var(--blackberry);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+  }
+  
+  /* This keeps the original two-column layout, but without the name inside it */
+  .home-intro {
+    padding: 18px 0 80px;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    gap: 90px;
+  }
+  
+  .value-statement p {
+    max-width: 410px;
+    font-family: var(--heading-font);
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    line-height: 1.28;
+    margin-bottom: 36px;
+    color: var(--blackberry);
+  }
+  
+  .hero-image-frame {
+    border: 1px solid var(--border);
+    padding: 16px;
+    background: var(--surface);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+  }
+  
+  .hero-image-frame:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 70px rgba(35, 25, 30, 0.12);
+  }
+  
+  .hero-image-frame img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  
+  /* ================================
+     CENTERED EDITORIAL SECTIONS
+  ================================ */
+  
+  .center-section {
+    padding: 42px 0 86px;
+    text-align: center;
+  }
+  
+  .center-section h2,
+  .editorial-section h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    color: var(--blackberry);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .center-section p,
+  .editorial-section p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+  
+  .editorial-section {
+    padding: 34px 0 84px;
+    text-align: center;
+  }
+  
+  .editorial-section p + p {
+    margin-top: 22px;
+  }
+  
+  /* ================================
+     METRICS BAR
+  ================================ */
+  
+  .metrics {
+    margin-bottom: 90px;
+    padding: 42px 38px;
+    background: rgba(255, 250, 242, 0.72);
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .metric {
+    text-align: center;
+    padding: 0 24px;
+    border-right: 1px solid var(--border);
+    transition: 0.28s ease;
+  }
+  
+  .metric:last-child {
+    border-right: none;
+  }
+  
+  .metric:hover {
+    background: rgba(184, 115, 51, 0.07);
+  }
+  
+  .metric strong {
+    display: block;
+    font-family: var(--heading-font);
+    color: var(--blackberry);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 12px;
+    transition: 0.28s ease;
+  }
+  
+  .metric:hover strong {
+    color: var(--copper-moon);
+  }
+  
+  .metric span {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  /* ================================
+     INNER PAGE BASE
+  ================================ */
+  
+  .inner-page {
+    padding: 78px 0 90px;
+  }
+  
+  .page-title {
+    max-width: 600px;
+    margin-bottom: 70px;
+  }
+  
+  .page-title h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 8vw, 6.8rem);
+    color: var(--blackberry);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+  
+  .page-title p {
+    margin-top: 22px;
+    color: var(--muted);
+    max-width: 540px;
+  }
+  
+  /* ================================
+     BACKGROUND PAGE
+  ================================ */
+  
+  .background-list {
+    border-top: 1px solid var(--border);
+  }
+  
+  .background-row {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 70px;
+    padding: 42px 0;
+    border-bottom: 1px solid var(--border);
+    transition: 0.28s ease;
+  }
+  
+  .background-row:hover {
+    background: rgba(255, 250, 242, 0.42);
+    padding-left: 18px;
+  }
+  
+  .background-row h2 {
+    color: var(--blackberry);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  
+  .background-content {
+    display: grid;
+    gap: 26px;
+  }
+  
+  .background-content h3 {
+    font-family: var(--heading-font);
+    color: var(--text);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  
+  .background-content p {
+    color: var(--muted);
+    max-width: 680px;
+  }
+  
+  /* ================================
+     LITERATURE PAGE
+  ================================ */
+  
+  .literature-list {
+    border-top: 1px solid var(--border);
+  }
+  
+  .literature-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 60px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+    transition: 0.28s ease;
+  }
+  
+  .literature-item:hover {
+    padding-left: 18px;
+    background: rgba(255, 250, 242, 0.42);
+  }
+  
+  .literature-date {
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blackberry);
+  }
+  
+  .literature-item h2 {
+    font-family: var(--heading-font);
+    color: var(--blackberry);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: 0.28s ease;
+  }
+  
+  .literature-item:hover h2 {
+    color: var(--copper-moon);
+  }
+  
+  .literature-item p {
+    color: var(--muted);
+    max-width: 700px;
+  }
+  
+  /* ================================
+     ENGAGEMENTS PAGE
+  ================================ */
+  
+  .engagements-list {
+    border-top: 1px solid var(--border);
+  }
+  
+  .engagement-month {
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .engagement-month summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blackberry);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: 0.28s ease;
+  }
+  
+  .engagement-month summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .engagement-month summary:hover {
+    color: var(--copper-moon);
+    padding-left: 12px;
+  }
+  
+  .engagement-month summary span:last-child {
+    font-size: 1.4rem;
+    color: var(--copper-moon);
+    transition: 0.28s ease;
+  }
+  
+  .engagement-month[open] summary span:last-child {
+    transform: rotate(45deg);
+  }
+  
+  .engagement-content {
+    padding: 10px 0 42px 80px;
+    border-left: 1px solid var(--border);
+    margin-left: 20px;
+  }
+  
+  .engagement-entry {
+    position: relative;
+    padding: 0 0 30px 34px;
+  }
+  
+  .engagement-entry::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 9px;
+    width: 9px;
+    height: 9px;
+    background: var(--blackberry);
+    border-radius: 50%;
+  }
+  
+  .engagement-entry h3 {
+    font-family: var(--heading-font);
+    color: var(--blackberry);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .engagement-entry p,
+  .engagement-entry small {
+    color: var(--muted);
+  }
+  
+  /* ================================
+     CONTACT PAGE
+  ================================ */
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 90px;
+    align-items: start;
+  }
+  
+  .contact-info p {
+    color: var(--muted);
+    max-width: 420px;
+    margin: 22px 0 34px;
+  }
+  
+  .contact-detail {
+    margin-bottom: 18px;
+  }
+  
+  .contact-detail strong {
+    display: block;
+    color: var(--blackberry);
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  
+  .calendly-wrap {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+  }
+  
+  .calendly-inline-widget {
+    width: 100%;
+  }
+  
+  .quote {
+    margin-top: 70px;
+    padding-top: 46px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--blackberry);
+    font-size: 1.8rem;
+    font-style: italic;
+  }
+  
+  /* ================================
+     FOOTER
+  ================================ */
+  
+  .footer {
+    background: var(--kurobeni);
+    color: rgba(255, 255, 255, 0.78);
+    padding: 24px var(--page-margin);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 0.75rem;
+  }
+  
+  .footer a {
+    margin-left: 18px;
+  }
+  
+  /* ================================
+     PAGE ENTRANCE ANIMATION
+  ================================ */
+  
+  main {
+    animation: fadeUp 0.7s ease both;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ================================
+     RESPONSIVE
+  ================================ */
+  
+  @media (max-width: 900px) {
+    .nav {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 18px;
+    }
+  
+    .home-intro,
+    .background-row,
+    .literature-item,
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .hero-image-frame img {
+      height: 420px;
+    }
+  
+    .metrics {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 0;
+    }
+  
+    .metric:nth-child(2) {
+      border-right: none;
+    }
+  
+    .metric:nth-child(1),
+    .metric:nth-child(2) {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+  
+    .metric:nth-child(3),
+    .metric:nth-child(4) {
+      padding-top: 28px;
+    }
+  
+    .engagement-content {
+      padding-left: 28px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .home-title {
+      padding-top: 58px;
+    }
+  
+    .home-title h1,
+    .page-title h1 {
+      font-size: 4rem;
+    }
+  
+    .metrics,
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .metric {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+  
+    .metric:last-child {
+      border-bottom: none;
+    }
+  
+    .footer {
+      flex-direction: column;
+    }
+  
+    .footer a {
+      margin-left: 0;
+      margin-right: 18px;
+    }
+  }
+  
+  /* =========================================================
+     🔥 NEW MICRO-INTERACTIONS (ADDED ONLY — NOTHING REMOVED)
+  ========================================================= */
+  
+  /* Title reveal */
+  .home-title h1,
+  .page-title h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: titleReveal 0.8s ease forwards;
+  }
+  
+  @keyframes titleReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Line draw */
+  .title-line,
+  .page-title::after {
+    width: 0;
+    animation: lineDraw 0.6s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes lineDraw {
+    to {
+      width: 52px;
+    }
+  }
+  
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
