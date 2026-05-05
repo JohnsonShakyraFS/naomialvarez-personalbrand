@@ -351,6 +351,7 @@ img {
 .linkedin-embed-wrap {
   width: 100%;
   max-width: 100%;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--white);
@@ -908,16 +909,57 @@ main {
   .linkedin-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .linkedin-grid > :last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
-    max-width: 400px;
-    width: 100%;
-  }
 }
 
 @media (max-width: 700px) {
   .linkedin-grid {
     grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .linkedin-embed-wrap {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .linkedin-embed-wrap iframe {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .linkedin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .linkedin-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 420px);
+  }
+}
+
+@media (max-width: 800px) {
+  .linkedin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .linkedin-grid > :last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .linkedin-embed-wrap {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .linkedin-embed-wrap iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 620px !important;
   }
 }
