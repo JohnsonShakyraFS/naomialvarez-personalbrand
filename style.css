@@ -488,6 +488,27 @@ img {
   max-width: 700px;
 }
 
+.literature-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.literature-link {
+  margin-top: 18px;
+  width: fit-content;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: 0.28s ease;
+}
+
+.literature-link:hover {
+  transform: translateX(4px);
+  color: var(--black);
+}
+
 /* Future image-card version for Literature posts, if needed later */
 .literature-card-grid {
   display: grid;

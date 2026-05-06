@@ -3,34 +3,57 @@ const literatureContainer = document.getElementById("literature-posts");
 fetch("data/posts.json")
   .then((response) => response.json())
   .then((data) => {
+
     literatureContainer.innerHTML = data.posts
       .map((post) => {
-        const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric"
-        });
+
+        const formattedDate = new Date(post.date).toLocaleDateString(
+          "en-US",
+          {
+            month: "short",
+            day: "numeric",
+            year: "numeric"
+          }
+        );
 
         return `
-          <article class="literature-card">
-            ${
-              post.image
-                ? `<img src="${post.image}" alt="${post.title}">`
-                : `<div class="literature-card-placeholder"></div>`
-            }
+          <article class="literature-item">
 
-            <div class="literature-card-content">
-              <p class="literature-date">${formattedDate}</p>
-              <h2>${post.title}</h2>
-              <p>${post.preview}</p>
-              <a href="posts/post.html?post=${post.slug}">Read More →</a>
+            <span class="literature-date">
+              ${formattedDate}
+            </span>
+
+            <div class="literature-content">
+
+              <h2>
+                ${post.title}
+              </h2>
+
+              <p>
+                ${post.preview}
+              </p>
+
+              <a
+                href="posts/post.html?post=${post.slug}"
+                class="literature-link"
+              >
+                Read More →
+              </a>
+
             </div>
+
           </article>
         `;
       })
       .join("");
+
   })
   .catch((error) => {
-    literatureContainer.innerHTML = "<p>Unable to load posts.</p>";
+
+    literatureContainer.innerHTML = `
+      <p>Unable to load posts.</p>
+    `;
+
     console.error(error);
+
   });

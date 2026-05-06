@@ -1,10 +1,11 @@
 {
   "posts": [
     {
-      "title": "Example Blog Post",
-      "slug": "example-blog-post",
-      "date": "2026-05-05T12:00:00.000Z",
+      "title": "The Evolving Role of Fiduciary Leadership",
+      "slug": "fiduciary-leadership",
+      "date": "2026-05-12T12:00:00.000Z",
       "category": "Leadership",
+<<<<<<< HEAD
       "image": "/images/stairs.jpeg",
       "preview": "This is a short preview of the blog post.",
       "content": "This is the full blog post content. Replace this later."
@@ -15,6 +16,19 @@
       "date": "2026-05-05T18:39:00.000-07:00",
       "preview": "A reflection on leadership in complex environments.",
       "content": "This is the full blown text for the article."
+=======
+      "preview": "A reflection on leadership in complex environments.",
+      "content": "In increasingly complex professional environments, leadership requires more than technical expertise alone.\n\nOrganizations today face evolving economic, technological, and social pressures that require leaders to remain adaptable while maintaining clarity of purpose.\n\nFiduciary leadership is often defined not only by strategic decision-making, but by the ability to cultivate trust, accountability, and long-term institutional stability.\n\nAs organizations continue to navigate periods of uncertainty, thoughtful leadership will remain central to sustainable growth and responsible governance."
+    },
+
+    {
+      "title": "Building Governance That Endures",
+      "slug": "building-governance-that-endures",
+      "date": "2026-02-28T12:00:00.000Z",
+      "category": "Governance",
+      "preview": "Principles for long-term institutional strength.",
+      "content": "Strong governance frameworks are essential for organizations seeking long-term resilience.\n\nWhile operational efficiency and innovation remain important, governance structures often determine whether institutions can sustain credibility and trust over time.\n\nOrganizations that prioritize transparency, accountability, and ethical decision-making are generally better positioned to navigate periods of change and uncertainty.\n\nAs industries continue to evolve, governance will remain a foundational component of institutional longevity and public confidence."
+>>>>>>> ddfa006 (updated CMS styling)
     }
   ]
 }
