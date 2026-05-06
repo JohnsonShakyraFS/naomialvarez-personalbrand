@@ -1,0 +1,16 @@
+{
+    "engagements": [
+      {
+        "month": "May 2026",
+        "items": [
+          {
+            "type": "Volunteer Work",
+            "title": "Community Financial Literacy Workshop",
+            "organization": "Placeholder Organization",
+            "date": "May 12, 2026",
+            "description": "Brief description of the volunteer work or event."
+          }
+        ]
+      }
+    ]
+  }

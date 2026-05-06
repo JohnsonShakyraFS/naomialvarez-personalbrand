@@ -8,19 +8,15 @@ public_folder: "/images/uploads"
 collections:
   - name: "site_data"
     label: "Site Content"
-
     files:
       - name: "posts"
         label: "Literature Posts"
         file: "data/posts.json"
-
         fields:
           - label: "Posts"
             name: "posts"
             widget: "list"
-
             summary: "{{fields.title}}"
-
             fields:
               - label: "Title"
                 name: "title"
@@ -29,6 +25,7 @@ collections:
               - label: "Slug"
                 name: "slug"
                 widget: "string"
+                hint: "Example: fiduciary-leadership"
 
               - label: "Date"
                 name: "date"
@@ -51,3 +48,52 @@ collections:
               - label: "Full Post Content"
                 name: "content"
                 widget: "markdown"
+
+      - name: "engagements"
+        label: "Recent Engagements"
+        file: "data/engagements.json"
+        fields:
+          - label: "Engagement Months"
+            name: "engagements"
+            widget: "list"
+            summary: "{{fields.month}}"
+            fields:
+              - label: "Month"
+                name: "month"
+                widget: "string"
+                hint: "Example: May 2026"
+
+              - label: "Entries"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - "Volunteer Work"
+                      - "Event Attended"
+                      - "Speaking Engagement"
+                      - "Panel"
+                      - "Workshop"
+                      - "Community Involvement"
+
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+
+                  - label: "Organization"
+                    name: "organization"
+                    widget: "string"
+                    required: false
+
+                  - label: "Date"
+                    name: "date"
+                    widget: "string"
+                    required: false
+
+                  - label: "Description"
+                    name: "description"
+                    widget: "text"
+                    required: false
