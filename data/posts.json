@@ -1,10 +1,13 @@
 {
-    "posts": [
-      {
-        "title": "The Evolving Role of Fiduciary Leadership",
-        "date": "2026-05-05",
-        "excerpt": "A reflection on leadership in complex environments.",
-        "content": "This is your first post."
-      }
-    ]
-  }
+  "posts": [
+    {
+      "title": "Example Blog Post",
+      "slug": "example-blog-post",
+      "date": "2026-05-05T12:00:00.000Z",
+      "category": "Leadership",
+      "image": "/images/stairs.jpeg",
+      "preview": "This is a short preview of the blog post.",
+      "content": "This is the full blog post content. Replace this later."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site_data"
+    label: "Site Content"
+
+    files:
+      - name: "posts"
+        label: "Literature Posts"
+        file: "data/posts.json"
+
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+
+            summary: "{{fields.title}}"
+
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+
+              - label: "Category"
+                name: "category"
+                widget: "string"
+                required: false
+
+              - label: "Featured Image"
+                name: "image"
+                widget: "image"
+                required: false
+
+              - label: "Preview Text"
+                name: "preview"
+                widget: "text"
+
+              - label: "Full Post Content"
+                name: "content"
+                widget: "markdown"
