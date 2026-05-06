@@ -8,6 +8,14 @@
       "image": "/images/stairs.jpeg",
       "preview": "This is a short preview of the blog post.",
       "content": "This is the full blog post content. Replace this later."
+    },
+    {
+      "title": "KYRA - TEST BLOG",
+      "slug": "Test blog",
+      "date": "2026-05-05T18:03:00.000-07:00",
+      "image": "/images/uploads/screenshot-2026-05-05-at-11.00.54 am.png",
+      "preview": "This is a test for CMS blog.",
+      "content": "Thank you so much for taking the time to allow me to do your website today."
     }
   ]
 }
