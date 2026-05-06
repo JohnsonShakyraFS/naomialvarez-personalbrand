@@ -1,15 +1,3 @@
 {
-  "engagements": [
-    {
-      "month": "May 2026",
-      "items": [
-        {
-          "type": "Volunteer Work",
-          "title": "Sea Turtle Nesting Beach Cleanup",
-          "organization": "Coastal Wildlife Conservation Network",
-          "description": "Participated in a beach cleanup focused on protecting sea turtle nesting areas by removing plastic waste, fishing line, and other debris from the shoreline. The volunteer effort supported safer nesting conditions and helped raise awareness about marine conservation."
-        }
-      ]
-    }
-  ]
+  "engagements": []
 }
