@@ -8,6 +8,13 @@
       "image": "/images/stairs.jpeg",
       "preview": "This is a short preview of the blog post.",
       "content": "This is the full blog post content. Replace this later."
+    },
+    {
+      "title": "The Evolving Role of Fiduciary Leadership",
+      "slug": "n/a",
+      "date": "2026-05-05T18:39:00.000-07:00",
+      "preview": "A reflection on leadership in complex environments.",
+      "content": "This is the full blown text for the article."
     }
   ]
 }
