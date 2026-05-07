@@ -1020,9 +1020,10 @@ img {
 
 .contact-strip h2 {
   font-family: var(--heading-font);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.6rem, 5vw, 4rem);
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
   color: var(--black);
   margin-bottom: 40px;
 }
