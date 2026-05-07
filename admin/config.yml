@@ -53,45 +53,64 @@ collections:
         label: "Recent Engagements"
         file: "data/engagements.json"
         fields:
-          - label: "Engagement Months"
+          - label: "Engagement Groups"
             name: "engagements"
             widget: "list"
-            summary: "{{fields.month}}"
+            summary: "{{fields.quarter}}"
             fields:
-              - label: "Month"
-                name: "month"
+              - label: "Quarter / Group"
+                name: "quarter"
                 widget: "string"
-                hint: "Example: May 2026"
+                hint: "Example: 2026 Q2"
 
               - label: "Entries"
                 name: "items"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - label: "Type"
-                    name: "type"
-                    widget: "select"
-                    options:
-                      - "Volunteer Work"
-                      - "Event Attended"
-                      - "Speaking Engagement"
-                      - "Panel"
-                      - "Workshop"
-                      - "Community Involvement"
-
-                  - label: "Title"
+                  - label: "Event Name"
                     name: "title"
                     widget: "string"
 
-                  - label: "Organization"
+                  - label: "Role / Participation"
+                    name: "role"
+                    widget: "string"
+                    hint: "Example: Industry Speaker, Judge and Mentor, Volunteer & Attendee"
+
+                  - label: "Host / Organization"
                     name: "organization"
                     widget: "string"
                     required: false
+                    hint: "Example: California State University, Long Beach"
+
+                  - label: "Category"
+                    name: "category"
+                    widget: "select"
+                    required: false
+                    options:
+                      - "Datathon"
+                      - "Conference"
+                      - "Panel"
+                      - "Workshop"
+                      - "Alumni Event"
+                      - "Showcase"
+                      - "Networking Event"
+                      - "Volunteer Work"
+                      - "Speaking Engagement"
+                      - "Community Involvement"
+                      - "Other"
 
                   - label: "Date"
                     name: "date"
                     widget: "string"
                     required: false
+                    hint: "Example: May 22nd–May 23rd"
+
+                  - label: "Location"
+                    name: "location"
+                    widget: "string"
+                    required: false
+                    hint: "Example: Long Beach, CA"
 
                   - label: "Description"
                     name: "description"
