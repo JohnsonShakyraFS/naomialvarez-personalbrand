@@ -133,6 +133,45 @@ img {
   letter-spacing: 0.04em;
 }
 
+/*------------*/
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 14px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  z-index: 999;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.78rem;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  color: var(--accent);
+  background: var(--off-white);
+}
+
 /* ================================
    BUTTONS / DETAILS
 ================================ */
@@ -210,17 +249,25 @@ img {
   max-width: 410px;
   font-family: var(--body-font);
   font-size: clamp(1.2rem, 2.3vw, 1.85rem);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.28;
   margin-bottom: 36px;
-  color: var(--accent);
+  color: var(--gray);
 }
+
+/* ================================
+   HERO IMAGE
+================================ */
 
 .hero-image-frame {
   border: 1px solid var(--border);
   padding: 16px;
   background: var(--white);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
+
+  /* important */
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-image-frame:hover {
@@ -230,9 +277,13 @@ img {
 
 .hero-image-frame img {
   width: 100%;
-  height: 560px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
+
+  /* adjust focal point */
+  object-position: center 15%;
+
+  display: block;
 }
 
 /* ================================
@@ -269,6 +320,95 @@ img {
 
 .editorial-section p + p {
   margin-top: 22px;
+}
+
+/* ================================
+   CORE WORK SECTION
+================================ */
+
+.core-work-section {
+  padding: 90px 0 0;
+}
+
+.core-work-header {
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+
+.core-work-header h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--black);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+
+.core-work-header p {
+  color: var(--gray);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.core-work-cta {
+  margin-top: 60px;
+}
+
+.bottom-rule {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+/* ================================
+   EXPERTISE GRID
+================================ */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding: 0;
+  border: none;
+}
+
+.expertise-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-label {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.expertise-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.expertise-column li {
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-left: 18px;
+  position: relative;
+  list-style: none;
+}
+
+.expertise-column li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
 }
 
 /* ================================
@@ -329,13 +469,20 @@ img {
 .linkedin-section {
   padding: 80px 0;
   border-top: 1px solid var(--border);
-  text-align: center;
   overflow: hidden;
 }
 
 .linkedin-header {
   max-width: 620px;
-  margin: 0 auto 50px;
+  margin-bottom: 50px;
+}
+
+.linkedin-header h2 {
+  margin-bottom: 16px;
+}
+
+.linkedin-header p {
+  color: var(--gray);
 }
 
 .linkedin-grid {
@@ -393,6 +540,151 @@ img {
 }
 
 /* ================================
+   ABOUT PAGE CLEAN STRUCTURE
+================================ */
+
+.about-panel {
+  border-top: 1px solid var(--border);
+  transition: 0.35s ease;
+}
+
+.about-panel:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.about-panel-inner {
+  padding: 76px 0;
+  max-width: 980px;
+  transition: transform 0.35s ease;
+}
+
+.about-panel:hover {
+  background: var(--off-white);
+}
+
+.about-panel:hover .about-panel-inner {
+  transform: translateX(12px);
+}
+
+.about-panel h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 30px;
+}
+
+.about-panel h3 {
+  color: var(--black);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 38px 0 16px;
+}
+
+.about-panel p {
+  color: var(--gray);
+  line-height: 1.9;
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+/* ================================
+   ABOUT PAGE BULLETS
+================================ */
+
+.about-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.about-list li {
+  list-style: none;
+  color: var(--gray);
+  line-height: 1.7;
+  padding-left: 22px;
+  position: relative;
+}
+
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ================================
+   DOUBLE COLUMN LISTS
+================================ */
+
+.about-list.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 54px;
+  row-gap: 12px;
+}
+
+/* ================================
+   GROUPED CONTENT
+================================ */
+
+.about-group {
+  margin-top: 42px;
+}
+
+.about-group:first-of-type {
+  margin-top: 28px;
+}
+
+/* ================================
+   RESUME LAYOUT
+================================ */
+
+.resume-role {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 50px;
+  padding: 38px 0;
+  border-top: 1px solid var(--border);
+}
+
+.resume-meta span {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resume-content h3 {
+  margin: 0 0 18px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+  .about-list.two-column,
+  .resume-role {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel:hover .about-panel-inner {
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* ================================
    BACKGROUND PAGE
 ================================ */
 
@@ -443,9 +735,47 @@ img {
    LITERATURE PAGE
    NOTE: Layout preserved, per client request.
 ================================ */
+.literature-intro {
+  max-width: 760px;
+  margin: -30px 0 70px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--border);
+}
+
+.literature-intro p {
+  color: var(--black);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+.literature-intro ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.literature-intro li {
+  list-style: none;
+  position: relative;
+  padding-left: 22px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.literature-intro li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+}
 
 .literature-list {
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 .literature-item {
@@ -854,7 +1184,7 @@ main {
   }
 
   .hero-image-frame img {
-    height: 420px;
+    aspect-ratio: 4 / 5;
   }
 
   .metrics {
@@ -884,6 +1214,11 @@ main {
   .linkedin-grid,
   .literature-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
