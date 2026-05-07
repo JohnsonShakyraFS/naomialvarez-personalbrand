@@ -20,7 +20,7 @@ fetch("data/engagements.json")
         const items = monthGroup.items || [];
 
         return `
-          <details class="engagement-month" ${index === 0 ? "open" : ""}>
+          <details class="engagement-month">
             <summary>
               <span>${monthGroup.quarter || monthGroup.month || "Engagements"}</span>
               <span>+</span>
