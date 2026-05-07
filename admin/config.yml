@@ -9,14 +9,20 @@ collections:
   - name: "site_data"
     label: "Site Content"
     files:
+
+      # ================================
+      # LITERATURE POSTS
+      # ================================
       - name: "posts"
         label: "Literature Posts"
         file: "data/posts.json"
+
         fields:
           - label: "Posts"
             name: "posts"
             widget: "list"
             summary: "{{fields.title}}"
+
             fields:
               - label: "Title"
                 name: "title"
@@ -49,14 +55,19 @@ collections:
                 name: "content"
                 widget: "markdown"
 
+      # ================================
+      # RECENT ENGAGEMENTS
+      # ================================
       - name: "engagements"
         label: "Recent Engagements"
         file: "data/engagements.json"
+
         fields:
           - label: "Engagement Groups"
             name: "engagements"
             widget: "list"
             summary: "{{fields.quarter}}"
+
             fields:
               - label: "Quarter / Group"
                 name: "quarter"
@@ -67,26 +78,22 @@ collections:
                 name: "items"
                 widget: "list"
                 summary: "{{fields.title}}"
+
                 fields:
-                  - label: "Event Name"
+                  - label: "Title"
                     name: "title"
                     widget: "string"
 
-                  - label: "Role / Participation"
+                  - label: "Role"
                     name: "role"
                     widget: "string"
-                    hint: "Example: Industry Speaker, Judge and Mentor, Volunteer & Attendee"
-
-                  - label: "Host / Organization"
-                    name: "organization"
-                    widget: "string"
-                    required: false
-                    hint: "Example: California State University, Long Beach"
+                    hint: "Example: Industry Speaker"
 
                   - label: "Category"
                     name: "category"
                     widget: "select"
                     required: false
+
                     options:
                       - "Datathon"
                       - "Conference"
@@ -111,8 +118,3 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Example: Long Beach, CA"
-
-                  - label: "Description"
-                    name: "description"
-                    widget: "text"
-                    required: false
