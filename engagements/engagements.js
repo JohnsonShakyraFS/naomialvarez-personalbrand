@@ -22,7 +22,7 @@ fetch("data/engagements.json")
         return `
           <details class="engagement-month" ${index === 0 ? "open" : ""}>
             <summary>
-              <span>${monthGroup.month}</span>
+              <span>${monthGroup.quarter || monthGroup.month || "Engagements"}</span>
               <span>+</span>
             </summary>
 
