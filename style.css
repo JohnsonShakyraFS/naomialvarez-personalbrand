@@ -87,7 +87,7 @@ img {
 
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 34px;
   font-size: 0.78rem;
   font-weight: 500;
