@@ -1070,6 +1070,10 @@ img {
   font-size: 0.75rem;
 }
 
+.footer p {
+  margin-top: 5px;
+}
+
 .footer a {
   margin-left: 18px;
   color: var(--white);
