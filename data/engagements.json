@@ -1,18 +1,103 @@
 {
   "engagements": [
     {
-      "month": "June 2026",
+      "quarter": "2026 Q2",
       "items": [
         {
-          "type": "Volunteer Work",
-          "title": "Sea Turtle Nesting Beach Cleanup",
-          "organization": "Coastal Wildlife Conservation Network",
-          "description": "Participated in a beach cleanup focused on protecting sea turtle nesting areas by removing plastic waste, fishing line, and other debris from the shoreline. The volunteer effort supported safer nesting conditions and helped raise awareness about marine conservation."
+          "title": "California State University, Long Beach AIXDATA Annual Datathon",
+          "role": "Industry Speaker",
+          "category": "Datathon",
+          "date": "May 22nd - May 23rd"
+        },
+        {
+          "title": "3rd Annual Asian Pacific Islander Alumni Association Unity Celebration: Rooted in Heritage, United in Purpose",
+          "category": "Other",
+          "role": "Alumni Association",
+          "date": "May 2nd"
+        },
+        {
+          "title": "University of California, Los Angeles Datafest",
+          "role": "Datathon Mentor",
+          "category": "Datathon",
+          "date": "May 1st - May 3rd",
+          "location": "Los Angeles"
+        },
+        {
+          "title": "Annual Southern California Applied Mathematics Symposium",
+          "role": "Volunteer & Attendee",
+          "date": "April 25th",
+          "category": "Other"
+        },
+        {
+          "title": "Loyola Marymount University Fred Kiesner Center for Entrepreneurship Incubator Showcase",
+          "role": "Alumni Attendee",
+          "category": "Showcase",
+          "date": "April 29th"
+        },
+        {
+          "title": "University of California, Irvine Datathon",
+          "role": "Judge and Mentor",
+          "date": "April 5th",
+          "category": "Datathon"
         }
       ]
     },
     {
-      "month": "May 2026"
+      "month": "June 2026",
+      "items": [
+        {
+          "title": "Loyola Marymount University Information Systems of Business Analytics Society Annual Datathon",
+          "category": "Datathon",
+          "role": "Judge and Mentor",
+          "date": "March 14th"
+        },
+        {
+          "title": "Women in Mathematics Southern California Conference",
+          "role": "Volunteer & Attendee",
+          "category": "Conference",
+          "date": "February 21st"
+        },
+        {
+          "category": "Panel",
+          "title": "Loyola Marymount University Department of Mathematics, Statistics, and Data Science Industry Alumni Panel",
+          "role": "Speaker",
+          "date": "February 4th"
+        },
+        {
+          "title": "Loyola Marymount University Annual Business, Engineering, Science, and Technology Startup Bootcamp",
+          "category": "Other",
+          "date": "January 10th",
+          "role": "Pitch Advisor"
+        }
+      ],
+      "quarter": "2026 Q1"
+    },
+    {
+      "month": "May 2026",
+      "items": [
+        {
+          "title": "Loyola Marymount University Fred Kiesner Center for Entrepreneurship Incubator Showcase",
+          "role": "Attendee",
+          "date": "December 3rd",
+          "category": "Showcase"
+        },
+        {
+          "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
+          "role": "Judge",
+          "date": "November 20th"
+        },
+        {
+          "title": "Los Angeles City College Annual Datathon",
+          "role": "Judge & Industry Speaker",
+          "date": "November 15th"
+        },
+        {
+          "title": "Resolution Economics 27th Anniversary Party",
+          "role": "Guest",
+          "date": "October 18th"
+        }
+      ],
+      "quarter": "2025 Q4"
     }
   ]
 }
