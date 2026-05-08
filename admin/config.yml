@@ -89,23 +89,11 @@ collections:
                     widget: "string"
                     hint: "Example: Industry Speaker"
 
-                  - label: "Category"
+                  - label: "Event Type / Header"
                     name: "category"
-                    widget: "select"
+                    widget: "string"
                     required: false
-
-                    options:
-                      - "Datathon"
-                      - "Conference"
-                      - "Panel"
-                      - "Workshop"
-                      - "Alumni Event"
-                      - "Showcase"
-                      - "Networking Event"
-                      - "Volunteer Work"
-                      - "Speaking Engagement"
-                      - "Community Involvement"
-                      - "Other"
+                    hint: "Example: Datathon, Alumni Event, Conference, Speaking Engagement"
 
                   - label: "Date"
                     name: "date"
