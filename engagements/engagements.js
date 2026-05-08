@@ -3,64 +3,122 @@ const engagementsContainer = document.getElementById("engagements-list");
 fetch("data/engagements.json")
   .then((response) => response.json())
   .then((data) => {
-    const engagementMonths = data.engagements || [];
+    const engagementGroups = data.engagements || [];
 
-    if (engagementMonths.length === 0) {
+    // EMPTY STATE
+    if (engagementGroups.length === 0) {
       engagementsContainer.innerHTML = `
         <div class="empty-state">
           <h2>Recent Engagements Coming Soon</h2>
-          <p>Volunteer work, events, and speaking engagements will appear here.</p>
+          <p>
+            Volunteer work, speaking engagements, academic collaborations,
+            and advisory work will appear here.
+          </p>
         </div>
       `;
       return;
     }
 
-    engagementsContainer.innerHTML = engagementMonths
-      .map((monthGroup, index) => {
-        const items = monthGroup.items || [];
+    // RENDER ENGAGEMENT GROUPS
+    engagementsContainer.innerHTML = engagementGroups
+      .map((group) => {
+        const groupTitle =
+          group.quarter || group.month || "Engagements";
+
+        const items = group.items || [];
 
         return `
           <details class="engagement-month">
+
+            <!-- ACCORDION HEADER -->
             <summary>
-              <span>${monthGroup.quarter || monthGroup.month || "Engagements"}</span>
+              <span>${groupTitle}</span>
               <span>+</span>
             </summary>
 
+            <!-- TIMELINE CONTENT -->
             <div class="engagement-content">
+
               ${
                 items.length > 0
                   ? items
                       .map((item) => {
                         return `
                           <div class="engagement-entry">
-                            <p class="engagement-type">${item.type || ""}</p>
-                            <h3>${item.title || ""}</h3>
+
+                            <!-- CATEGORY -->
                             ${
-                              item.organization
-                                ? `<p>${item.organization}</p>`
+                              item.category
+                                ? `
+                                  <p class="engagement-category">
+                                    ${item.category}
+                                  </p>
+                                `
                                 : ""
                             }
-                            ${item.date ? `<small>${item.date}</small>` : ""}
-                            ${
-                              item.description
-                                ? `<p>${item.description}</p>`
-                                : ""
-                            }
+
+                            <!-- TITLE -->
+                            <h3>
+                              ${item.title || ""}
+                            </h3>
+
+                            <!-- META INFO -->
+                            <div class="engagement-meta">
+
+                              ${
+                                item.role
+                                  ? `
+                                    <span class="engagement-role">
+                                      ${item.role}
+                                    </span>
+                                  `
+                                  : ""
+                              }
+
+                              ${
+                                item.date
+                                  ? `
+                                    <span>
+                                      ${item.date}
+                                    </span>
+                                  `
+                                  : ""
+                              }
+
+                              ${
+                                item.location
+                                  ? `
+                                    <span>
+                                      ${item.location}
+                                    </span>
+                                  `
+                                  : ""
+                              }
+
+                            </div>
+
                           </div>
                         `;
                       })
                       .join("")
-                  : `<p>No engagements listed for this month.</p>`
+                  : `
+                      <p>No engagements listed for this section.</p>
+                    `
               }
+
             </div>
+
           </details>
         `;
       })
       .join("");
   })
+
+  // ERROR STATE
   .catch((error) => {
     engagementsContainer.innerHTML = `
       <p>Unable to load engagements.</p>
     `;
+
     console.error(error);
   });
