@@ -899,6 +899,33 @@ img {
 }
 
 /* ================================
+   EMPTY STATE
+================================ */
+
+.empty-state {
+  padding: 90px 0;
+}
+
+/* ================================
+   MATCH CONTACT STRIP + EMPTY STATE
+================================ */
+
+.empty-state h2,
+.contact-strip h2 {
+  font-family: var(--heading-font) !important;
+  font-size: clamp(2.6rem, 5vw, 4rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.05 !important;
+  color: var(--black) !important;
+}
+
+.empty-state p {
+  color: var(--gray);
+  max-width: 620px;
+}
+
+/* ================================
    ENGAGEMENTS PAGE
 ================================ */
 
@@ -1031,24 +1058,46 @@ img {
 }
 
 /* ================================
+   EMPTY STATE + CONTACT ALIGNMENT
+================================ */
+
+.empty-state,
+.contact-strip {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+}
+
+/* DIVIDER BETWEEN SECTIONS */
+
+.contact-strip {
+  border-top: 1px solid var(--border);
+  padding-top: 90px;
+  margin-top: 90px;
+}
+
+/* MATCH LEFT ALIGNMENT */
+
+.contact-strip-content {
+  max-width: 1000px;
+  margin: 0;
+}
+
+/* MATCH HEADING SIZE */
+
+.empty-state h2,
+.contact-strip h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--black);
+}
+
+/* ================================
    CONTACT STRIP
    Add this above the footer on every page.
 ================================ */
-
-.contact-strip {
-  padding: 80px 0;
-  border-top: none;
-}
-
-.contact-strip h2 {
-  font-family: var(--heading-font) !important;
-  font-size: clamp(2.8rem, 5vw, 4rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.04em !important;
-  line-height: 1.05 !important;
-  color: var(--black) !important;
-  margin-bottom: 40px !important;
-}
 
 .contact-strip-grid {
   display: grid;
@@ -1428,23 +1477,23 @@ main {
   }
 
   .footer-brand {
-    align-items: left;
+    align-items: flex-start;
   }
 
   .footer-right {
-    align-items: left;
+    align-items: flex-start;
     gap: 26px;
   }
 
   .footer-nav {
-    justify-content: left;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 24px;
   }
 
   .footer-social {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
   }
 
   .about-columns {
