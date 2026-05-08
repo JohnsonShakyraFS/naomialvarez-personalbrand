@@ -561,7 +561,7 @@ img {
 }
 
 .about-panel:last-child {
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
 }
 
 .about-panel-inner {
