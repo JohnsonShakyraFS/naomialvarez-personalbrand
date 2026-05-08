@@ -108,7 +108,7 @@ img {
   position: relative;
   padding-bottom: 6px;
   border-bottom: 1px solid transparent;
-  font-size: 1rem;
+  font-size: 1.20rem;
   transition: 0.28s ease;
   line-height: 1;
 }
