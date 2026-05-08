@@ -11,7 +11,7 @@
         },
         {
           "title": "3rd Annual Asian Pacific Islander Alumni Association Unity Celebration: Rooted in Heritage, United in Purpose",
-          "category": "Other",
+          "category": "Alumni Event",
           "role": "Alumni Association",
           "date": "May 2nd"
         },
@@ -26,7 +26,7 @@
           "title": "Annual Southern California Applied Mathematics Symposium",
           "role": "Volunteer & Attendee",
           "date": "April 25th",
-          "category": "Other"
+          "category": null
         },
         {
           "title": "Loyola Marymount University Fred Kiesner Center for Entrepreneurship Incubator Showcase",
@@ -65,7 +65,7 @@
         },
         {
           "title": "Loyola Marymount University Annual Business, Engineering, Science, and Technology Startup Bootcamp",
-          "category": "Other",
+          "category": null,
           "date": "January 10th",
           "role": "Pitch Advisor"
         }
@@ -82,14 +82,27 @@
           "category": "Showcase"
         },
         {
+          "title": "Loyola Marymount University Coffee with Jesuit Community Event",
+          "category": "Community Involvement",
+          "date": "November 21st",
+          "role": "Invited Attendee"
+        },
+        {
           "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
           "role": "Judge",
           "date": "November 20th"
         },
         {
+          "title": "Loyola Marymount University 45 Year Anniversary of Asian Pacific Islander Desi Student Services",
+          "role": "Alumni Ambassador Attendee",
+          "date": "November 19th",
+          "category": "Other"
+        },
+        {
           "title": "Los Angeles City College Annual Datathon",
           "role": "Judge & Industry Speaker",
-          "date": "November 15th"
+          "date": "November 15th",
+          "category": "Datathon"
         },
         {
           "title": "Resolution Economics 27th Anniversary Party",
@@ -98,6 +111,87 @@
         }
       ],
       "quarter": "2025 Q4"
+    },
+    {
+      "quarter": "2025 Q3",
+      "items": [
+        {
+          "title": "Loyola Marymount University Service and Action House New Member Induction",
+          "category": "Other",
+          "date": "August 18th - 21st",
+          "role": "Organizer"
+        },
+        {
+          "title": "Loyola Marymount University Master of Science in Business Analytics Program Mentor/Mentee Kickoff Event",
+          "date": "September 10th",
+          "role": "Member"
+        }
+      ]
+    },
+    {
+      "quarter": "2025 Q2",
+      "items": [
+        {
+          "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
+          "date": "May 7th",
+          "role": "Judge"
+        },
+        {
+          "title": "Loyola Marymount University Academic, Services, and Leadership Award Convocation",
+          "role": "Alfred J. Kilp Award Recipient",
+          "date": "April 25th"
+        },
+        {
+          "title": "Loyola Marymount University College of Business International Business Case Competition",
+          "role": "Organizer",
+          "date": "April 7th - 11th"
+        }
+      ]
+    },
+    {
+      "quarter": "2025 Q1",
+      "items": [
+        {
+          "title": "Loyola Marymount University Her Playbook: Women in Sports ",
+          "role": "Attendee",
+          "date": "March 25th"
+        },
+        {
+          "title": "Loyola Marymount University Undergraduate Research Symposium ",
+          "role": "Presenter",
+          "date": "March 21st"
+        },
+        {
+          "title": "Loyola Marymount University College of Business' Sustainable and Ethical Series \"Climate Change and Changing prices: The Costs you Don't See.\"",
+          "role": "Facilitator & Speaker",
+          "date": "January 22"
+        }
+      ]
+    },
+    {
+      "quarter": "2024 Q4",
+      "items": [
+        {
+          "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
+          "role": "Judge",
+          "date": "November 21st"
+        },
+        {
+          "title": "Loyola Marymount University College of Business Administration Hilton Distinguished Entrepreneur Lecture Series Speaker Event and Dinner",
+          "role": "Invited Guest",
+          "date": "November 18th"
+        },
+        {
+          "title": "Orange County Schools of Performing Arts Preview Day",
+          "role": "Community Attendee",
+          "date": "November 2nd"
+        },
+        {
+          "title": "Loyola Marymount University Career and Professional Development Seattle Career Trek",
+          "role": "Seaver College of Science and Engineering Representative",
+          "date": "October 9th - 11th"
+        }
+      ]
     }
   ]
 }
