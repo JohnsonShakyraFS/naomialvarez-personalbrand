@@ -1173,12 +1173,10 @@ img {
 }
 
 .research-header h1 {
-  font-family: var(--heading-font);
   font-size: clamp(2.6rem, 6vw, 5rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.05em;
-  color: var(--black);
   margin-bottom: 34px;
 }
 
@@ -1197,16 +1195,13 @@ img {
 }
 
 .research-section {
-  padding: 56px 0;
-  border-bottom: 1px solid var(--border);
+  padding: 56px 0 0;
 }
 
 .research-section h2 {
-  font-family: var(--heading-font);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  color: var(--black);
   margin-bottom: 24px;
 }
 
@@ -1217,52 +1212,44 @@ img {
   max-width: 850px;
 }
 
-.research-details {
-  padding: 56px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.research-detail-row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 50px;
-  padding: 28px 0;
+/* only divider before abstract */
+.research-section + .research-section {
+  margin-top: 56px;
+  padding-top: 56px;
   border-top: 1px solid var(--border);
 }
 
-.research-detail-row:first-child {
-  border-top: none;
+/* tools/status simpler */
+.research-details {
+  margin-top: 64px;
+  padding-top: 34px;
+}
+
+.research-detail-row {
+  margin-bottom: 34px;
 }
 
 .research-detail-row h3 {
-  color: var(--accent);
-  font-size: 0.78rem;
+  color: var(--black);
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .research-detail-row ul {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.research-detail-row li {
+.research-detail-row li,
+.research-tags span {
   list-style: none;
   color: var(--gray);
-  position: relative;
-  padding-left: 20px;
-}
-
-.research-detail-row li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .research-tags {
@@ -1271,17 +1258,12 @@ img {
   gap: 10px;
 }
 
-.research-tags span {
-  border: 1px solid var(--border);
-  padding: 8px 14px;
-  color: var(--black);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--white);
+.research-tags span:not(:last-child)::after,
+.research-detail-row li:not(:last-child)::after {
+  content: "•";
+  margin-left: 10px;
+  color: var(--accent);
 }
-
 /* ================================
    FOOTER
 ================================ */

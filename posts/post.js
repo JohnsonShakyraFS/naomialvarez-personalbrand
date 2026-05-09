@@ -3,6 +3,25 @@ const postContainer = document.getElementById("post-container");
 const params = new URLSearchParams(window.location.search);
 const slug = params.get("post");
 
+/* ================================
+   FORMAT MONTH + YEAR
+================================ */
+
+function formatMonthYear(dateValue) {
+  if (!dateValue) return "";
+
+  const parsedDate = new Date(dateValue);
+
+  if (!isNaN(parsedDate)) {
+    return parsedDate.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  return dateValue;
+}
+
 fetch("../data/posts.json")
   .then((response) => response.json())
 
@@ -13,9 +32,10 @@ fetch("../data/posts.json")
 
     const post = posts.find((item) => item.slug === slug);
 
-    // ================================
-    // POST NOT FOUND
-    // ================================
+    /* ================================
+       POST NOT FOUND
+    ================================= */
+
     if (!post) {
       postContainer.innerHTML = `
         <div class="page-title">
@@ -34,26 +54,29 @@ fetch("../data/posts.json")
       return;
     }
 
-    // ================================
-    // PAGE TITLE
-    // ================================
+    /* ================================
+       PAGE TITLE
+    ================================= */
+
     document.title = `${post.title} | Literature`;
 
-    // ================================
-    // RENDER POST
-    // ================================
+    /* ================================
+       RENDER POST
+    ================================= */
+
     postContainer.innerHTML = `
 
       <!-- ================================
            RESEARCH HEADER
       ================================= -->
+
       <header class="research-header">
 
         ${
           post.date
             ? `
               <p class="research-date">
-                ${post.date}
+                ${formatMonthYear(post.date)}
               </p>
             `
             : ""
@@ -98,6 +121,7 @@ fetch("../data/posts.json")
       <!-- ================================
            FEATURED IMAGE
       ================================= -->
+
       ${
         post.image
           ? `
@@ -113,6 +137,7 @@ fetch("../data/posts.json")
       <!-- ================================
            INTRODUCTION
       ================================= -->
+
       ${
         post.introduction
           ? `
@@ -132,6 +157,7 @@ fetch("../data/posts.json")
       <!-- ================================
            ABSTRACT
       ================================= -->
+
       ${
         post.abstract
           ? `
@@ -151,9 +177,11 @@ fetch("../data/posts.json")
       <!-- ================================
            RESEARCH DETAILS
       ================================= -->
+
       <section class="research-details">
 
         <!-- TOOLS -->
+
         ${
           post.tools
             ? `
@@ -179,6 +207,7 @@ fetch("../data/posts.json")
         }
 
         <!-- STATUS -->
+
         ${
           post.status
             ? `
@@ -208,6 +237,7 @@ fetch("../data/posts.json")
       <!-- ================================
            BACK LINK
       ================================= -->
+
       <a href="../literature.html" class="text-link">
         ← Back to Literature
       </a>
@@ -215,9 +245,10 @@ fetch("../data/posts.json")
     `;
   })
 
-  // ================================
-  // ERROR STATE
-  // ================================
+  /* ================================
+     ERROR STATE
+  ================================= */
+
   .catch((error) => {
     console.error(error);
 
