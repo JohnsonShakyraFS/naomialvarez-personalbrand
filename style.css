@@ -113,7 +113,7 @@ img {
   line-height: 1;
 }
 
-.nav-link > a, .nav-dropdown {
+.nav-links > a, .nav-dropdown {
   display: flex;
   align-items: center;
 }
@@ -1399,21 +1399,23 @@ img {
 .footer-social {
   display: flex;
   margin-left: 12px;
+  gap: 12px;
   align-items: center;
-}
-.footer-social img:nth-last-child(2) {
-  width: 20px;
-  margin-left: 8px; 
+  flex-shrink: 0;
 }
 
 .footer-social a {
-  margin: 0;
-  margin-left: 12px;
+  width: 42px; height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-social img {
-  width: 60px;
-  height: auto;
+  width: 42px; height: 42px;
+  max-width: none;
+  object-fit: contain;
   display: block;
 }
 
@@ -1479,7 +1481,43 @@ main {
    RESPONSIVE
 ================================ */
 
-@media (max-width: 1100px) {
+/* Prevent horizontal shifting */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Cleaner wrapping for modern browsers */
+h1,
+h2,
+h3,
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* Medium screens */
+@media (max-width: 1150px) {
+  .logo img {
+    width: 280px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .home-intro {
+    gap: 60px;
+  }
+
+  .expertise-grid {
+    gap: 40px;
+  }
+
   .linkedin-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1491,40 +1529,69 @@ main {
   }
 }
 
+/* Tablet */
 @media (max-width: 900px) {
+  .site-header {
+    padding-top: 26px;
+  }
+
   .nav {
     grid-template-columns: 1fr;
     justify-items: start;
+    gap: 24px;
   }
 
   .logo img {
     width: 250px;
-    max-width: 100%;
-    height: auto;
   }
 
   .nav-links {
-    flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 18px;
+    flex-wrap: wrap;
+    gap: 18px 24px;
   }
 
   .home-intro,
-  .background-row,
-  .literature-item,
   .contact-grid,
-  .contact-strip-grid {
+  .contact-strip-grid,
+  .literature-item {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 42px;
   }
 
-  .hero-image-frame img {
-    aspect-ratio: 4 / 5;
+  .home-title {
+    padding-top: 68px;
+  }
+
+  .inner-page {
+    padding-top: 60px;
+  }
+
+  .about-panel-inner {
+    padding: 62px 0;
+  }
+
+  .about-panel:hover .about-panel-inner {
+    transform: none;
+  }
+
+  .about-columns,
+  .about-columns.three-column,
+  .about-list.two-column,
+  .resume-role,
+  .expertise-grid,
+  .literature-card-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
   }
 
   .metrics {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px 0;
+    gap: 0;
+  }
+
+  .metric {
+    padding: 28px 20px;
   }
 
   .metric:nth-child(2) {
@@ -1533,38 +1600,46 @@ main {
 
   .metric:nth-child(1),
   .metric:nth-child(2) {
-    padding-bottom: 28px;
     border-bottom: 1px solid var(--border);
   }
 
-  .metric:nth-child(3),
-  .metric:nth-child(4) {
-    padding-top: 28px;
+  .hero-image-frame img {
+    aspect-ratio: 4 / 5;
   }
 
-  .expertise-grid,
-  .literature-card-grid {
+  .contact-strip {
+    padding: 76px 0;
+  }
+
+  .research-header h1 {
+    font-size: clamp(2.4rem, 8vw, 4rem);
+  }
+
+  .literature-intro {
+    max-width: 100%;
+    margin: -20px 0 60px;
+  }
+
+  .literature-item {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 18px;
+    padding: 34px 0;
   }
 
-  .about-columns,
-  .about-list.two-column,
-  .resume-role {
-    grid-template-columns: 1fr;
+  .literature-item:hover {
+    padding-left: 0;
   }
 
-  .about-panel:hover .about-panel-inner {
-    transform: none;
+  .literature-date {
+    margin-bottom: 4px;
   }
 
-  .about-columns,
-.about-columns.three-column {
-  grid-template-columns: 1fr;
-  gap: 44px;
-}
+  .literature-item p {
+    max-width: 100%;
+  }
 }
 
+/* Small tablets / large phones */
 @media (max-width: 800px) {
   .linkedin-grid {
     grid-template-columns: 1fr;
@@ -1589,7 +1664,7 @@ main {
 
   .footer {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 34px;
     text-align: left;
     padding: 44px 0;
   }
@@ -1600,34 +1675,71 @@ main {
     align-items: flex-start;
   }
 
+  .footer-right {
+    flex-direction: column;
+    gap: 18px;
+  }
+
   .footer-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 20px 24px;
   }
 
   .footer-social {
-    justify-content: flex-start;
+    margin-left: 0;
+    gap: 14px;
   }
 
-  .about-group {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .footer-social a {
+    width: 42px; height: 42px;
+    flex-basis: 42px;
   }
-    .research-detail-row {
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
+
+  .footer-social img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .research-detail-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
 
+/* Phones */
 @media (max-width: 600px) {
+  :root {
+    --page-margin: 22px;
+  }
+
+  .logo img {
+    width: 220px;
+  }
+
+  .nav-links {
+    gap: 16px 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
   .home-title {
-    padding-top: 58px;
+    padding-top: 54px;
   }
 
   .home-title h1,
-  .page-title h1 {
-    font-size: 3rem;
+  .page-title h1,
+  .research-header h1 {
+    font-size: clamp(2.45rem, 12vw, 3.2rem);
+    line-height: 1.03;
+  }
+
+  .about-panel h2,
+  .contact-strip h2,
+  .empty-state h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
   }
 
   .metrics {
@@ -1637,7 +1749,7 @@ main {
   .metric {
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 24px 0;
+    padding: 26px 0;
   }
 
   .metric:last-child {
@@ -1645,19 +1757,41 @@ main {
   }
 
   .engagement-content {
-    padding-left: 80px;
+    padding-left: 56px;
+    margin-left: 10px;
   }
 
-  .engagement-content::after {
-    left: 36px;
+  .engagement-entry {
+    padding-left: 20px;
   }
 
   .engagement-entry::before {
-    left: -55px;
+    left: -42px;
   }
 
   .footer-nav {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .literature-intro {
+    margin: -10px 0 50px;
+    padding-bottom: 40px;
+  }
+
+  .literature-intro p {
+    font-size: 1rem;
+  }
+
+  .literature-item h2 {
+    font-size: 1.15rem;
+  }
+
+  .empty-state {
+    padding: 70px 0 90px;
+  }
+
+  .empty-state h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
   }
 }
