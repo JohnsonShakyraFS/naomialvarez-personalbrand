@@ -6,6 +6,10 @@ fetch("data/testimonials.json")
   .then((data) => {
     const testimonials = data.testimonials || [];
 
+    /* ================================
+       EMPTY STATE
+    ================================= */
+
     if (testimonials.length === 0) {
       testimonialsContainer.innerHTML = `
         <p>No testimonials available yet.</p>
@@ -13,17 +17,54 @@ fetch("data/testimonials.json")
       return;
     }
 
+    /* ================================
+       RENDER TESTIMONIALS
+    ================================= */
+
     testimonialsContainer.innerHTML = testimonials
       .map((item) => {
         return `
           <details class="testimonial-item">
 
+            <!-- ACCORDION HEADER -->
+
             <summary>
-              <span>${item.name}</span>
-              <span>+</span>
+
+              <span class="testimonial-summary-text">
+
+                <!-- NAME -->
+
+                <strong>
+                  ${item.name || ""}
+                </strong>
+
+                <!-- UNDERLINED PREVIEW QUOTE -->
+
+                ${
+                  item.highlight
+                    ? `
+                      <em>
+                        ${item.highlight}
+                      </em>
+                    `
+                    : ""
+                }
+
+              </span>
+
+              <!-- TOGGLE -->
+
+              <span class="testimonial-toggle">
+                +
+              </span>
+
             </summary>
 
+            <!-- DROPDOWN CONTENT -->
+
             <div class="testimonial-content">
+
+              <!-- ROLE -->
 
               ${
                 item.role
@@ -35,15 +76,7 @@ fetch("data/testimonials.json")
                   : ""
               }
 
-              ${
-                item.highlight
-                  ? `
-                    <p class="testimonial-highlight">
-                      "${item.highlight}"
-                    </p>
-                  `
-                  : ""
-              }
+              <!-- FULL TESTIMONIAL -->
 
               ${
                 item.content
@@ -63,6 +96,10 @@ fetch("data/testimonials.json")
 
       .join("");
   })
+
+  /* ================================
+     ERROR STATE
+  ================================= */
 
   .catch((error) => {
     console.error(error);
