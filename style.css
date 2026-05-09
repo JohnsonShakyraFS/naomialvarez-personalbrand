@@ -779,6 +779,10 @@ img {
   transition: 0.28s ease;
 }
 
+.literature-item:last-child {
+  border-bottom: none;
+}
+
 .literature-item:hover {
   padding-left: 18px;
   background: var(--off-white);
@@ -1216,7 +1220,7 @@ img {
 .research-section + .research-section {
   margin-top: 56px;
   padding-top: 56px;
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 /* tools/status simpler */
