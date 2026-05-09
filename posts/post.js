@@ -11,7 +11,7 @@ fetch("../data/posts.json")
       postContainer.innerHTML = `
         <div class="page-title">
           <h1>Post Not Found</h1>
-          <p>The article you are looking for could not be found.</p>
+          <p>The publication you are looking for could not be found.</p>
         </div>
 
         <a href="../literature.html" class="btn">Back to Literature</a>
@@ -19,33 +19,102 @@ fetch("../data/posts.json")
       return;
     }
 
-    const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric"
-    });
-
     document.title = `${post.title} | Literature`;
 
     postContainer.innerHTML = `
-      <div class="page-title">
+      <header class="research-header">
+
+        ${post.date ? `<p class="research-date">${post.date}</p>` : ""}
+
         <h1>${post.title}</h1>
-        <p>${formattedDate}${post.category ? " · " + post.category : ""}</p>
-      </div>
+
+        ${
+          post.authors && post.authors.length
+            ? `
+              <p class="research-meta">
+                <strong>Authors:</strong> ${post.authors.join(", ")}
+              </p>
+            `
+            : ""
+        }
+
+        ${
+          post.affiliations && post.affiliations.length
+            ? `
+              <p class="research-meta">
+                <strong>Affiliations:</strong> ${post.affiliations.join(", ")}
+              </p>
+            `
+            : ""
+        }
+
+      </header>
 
       ${
         post.image
-          ? `<img src="${post.image}" alt="${post.title}" class="post-hero-image">`
+          ? `
+            <img 
+              src="${post.image}" 
+              alt="${post.title}" 
+              class="post-hero-image research-image"
+            >
+          `
           : ""
       }
 
-      <div class="post-content">
-        ${post.content
-          .split("\n")
-          .filter((paragraph) => paragraph.trim() !== "")
-          .map((paragraph) => `<p>${paragraph}</p>`)
-          .join("")}
-      </div>
+      ${
+        post.introduction
+          ? `
+            <section class="research-section">
+              <h2>Introduction</h2>
+              <p>${post.introduction}</p>
+            </section>
+          `
+          : ""
+      }
+
+      ${
+        post.abstract
+          ? `
+            <section class="research-section">
+              <h2>Abstract</h2>
+              <p>${post.abstract}</p>
+            </section>
+          `
+          : ""
+      }
+
+      <section class="research-details">
+
+        ${
+          post.tools && post.tools.length
+            ? `
+              <div class="research-detail-row">
+                <h3>Tools</h3>
+
+                <div class="research-tags">
+                  ${post.tools.map((tool) => `<span>${tool}</span>`).join("")}
+                </div>
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          post.status && post.status.length
+            ? `
+              <div class="research-detail-row">
+                <h3>Status</h3>
+
+                <ul>
+                  ${post.status.map((item) => `<li>${item}</li>`).join("")}
+                </ul>
+              </div>
+            `
+            : ""
+        }
+
+      </section>
 
       <a href="../literature.html" class="text-link">← Back to Literature</a>
     `;
