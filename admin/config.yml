@@ -35,7 +35,7 @@ collections:
 
               - label: "Date"
                 name: "date"
-                widget: "datetime"
+                widget: "string"
                 required: false
 
               - label: "Authors"
