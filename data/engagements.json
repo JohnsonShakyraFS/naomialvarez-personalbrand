@@ -11,8 +11,8 @@
         },
         {
           "title": "3rd Annual Asian Pacific Islander Alumni Association Unity Celebration: Rooted in Heritage, United in Purpose",
-          "category": "Alumni Event",
-          "role": "Alumni Association",
+          "category": "Alumni Association Event ",
+          "role": "Alumni Association Ambassador",
           "date": "May 2nd"
         },
         {
@@ -26,12 +26,12 @@
           "title": "Annual Southern California Applied Mathematics Symposium",
           "role": "Volunteer & Attendee",
           "date": "April 25th",
-          "category": null
+          "category": "Symposium"
         },
         {
           "title": "Loyola Marymount University Fred Kiesner Center for Entrepreneurship Incubator Showcase",
           "role": "Alumni Attendee",
-          "category": "Showcase",
+          "category": "Academic Programming",
           "date": "April 29th"
         },
         {
@@ -58,14 +58,14 @@
           "date": "February 21st"
         },
         {
-          "category": "Panel",
+          "category": "Speaking Engagement",
           "title": "Loyola Marymount University Department of Mathematics, Statistics, and Data Science Industry Alumni Panel",
           "role": "Speaker",
           "date": "February 4th"
         },
         {
           "title": "Loyola Marymount University Annual Business, Engineering, Science, and Technology Startup Bootcamp",
-          "category": null,
+          "category": "Startup Bootcamp",
           "date": "January 10th",
           "role": "Pitch Advisor"
         }
@@ -79,11 +79,11 @@
           "title": "Loyola Marymount University Fred Kiesner Center for Entrepreneurship Incubator Showcase",
           "role": "Attendee",
           "date": "December 3rd",
-          "category": "Showcase"
+          "category": "Academic Programing"
         },
         {
           "title": "Loyola Marymount University Coffee with Jesuit Community Event",
-          "category": "Community Involvement",
+          "category": "Community Event",
           "date": "November 21st",
           "role": "Invited Attendee"
         },
@@ -96,7 +96,7 @@
           "title": "Loyola Marymount University 45 Year Anniversary of Asian Pacific Islander Desi Student Services",
           "role": "Alumni Ambassador Attendee",
           "date": "November 19th",
-          "category": "Other"
+          "category": "Academic Programming"
         },
         {
           "title": "Los Angeles City College Annual Datathon",
@@ -105,9 +105,16 @@
           "category": "Datathon"
         },
         {
+          "title": "Loyola Marymount University Asian Pacific Islander Alumni Mixer",
+          "role": "Alumni Ambassador Attendee",
+          "category": "Alumni Association Event ",
+          "date": "October 22nd"
+        },
+        {
           "title": "Resolution Economics 27th Anniversary Party",
           "role": "Guest",
-          "date": "October 18th"
+          "date": "October 18th",
+          "category": "Industry Event"
         }
       ],
       "quarter": "2025 Q4"
@@ -116,15 +123,16 @@
       "quarter": "2025 Q3",
       "items": [
         {
-          "title": "Loyola Marymount University Service and Action House New Member Induction",
-          "category": "Other",
-          "date": "August 18th - 21st",
-          "role": "Organizer"
-        },
-        {
           "title": "Loyola Marymount University Master of Science in Business Analytics Program Mentor/Mentee Kickoff Event",
           "date": "September 10th",
-          "role": "Member"
+          "role": "Member",
+          "category": "Academic Programming"
+        },
+        {
+          "title": "Loyola Marymount University Service and Action House New Member Induction",
+          "category": "Annual Association Induction",
+          "date": "August 18th - 21st",
+          "role": "Organizer"
         }
       ]
     },
@@ -134,17 +142,20 @@
         {
           "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
           "date": "May 7th",
-          "role": "Judge"
+          "role": "Judge",
+          "category": "Academic Programming"
         },
         {
           "title": "Loyola Marymount University Academic, Services, and Leadership Award Convocation",
           "role": "Alfred J. Kilp Award Recipient",
-          "date": "April 25th"
+          "date": "April 25th",
+          "category": "Convocation"
         },
         {
           "title": "Loyola Marymount University College of Business International Business Case Competition",
           "role": "Organizer",
-          "date": "April 7th - 11th"
+          "date": "April 7th - 11th",
+          "category": "Academic Programming"
         }
       ]
     },
@@ -154,17 +165,20 @@
         {
           "title": "Loyola Marymount University Her Playbook: Women in Sports ",
           "role": "Attendee",
-          "date": "March 25th"
+          "date": "March 25th",
+          "category": "Industry Event"
         },
         {
           "title": "Loyola Marymount University Undergraduate Research Symposium ",
           "role": "Presenter",
-          "date": "March 21st"
+          "date": "March 21st",
+          "category": "Symposium"
         },
         {
           "title": "Loyola Marymount University College of Business' Sustainable and Ethical Series \"Climate Change and Changing prices: The Costs you Don't See.\"",
           "role": "Facilitator & Speaker",
-          "date": "January 22"
+          "date": "January 22",
+          "category": "Speaking Engagement"
         }
       ]
     },
@@ -174,22 +188,26 @@
         {
           "title": "Loyola Marymount University D.K. Kim Foundation Business for Good Program",
           "role": "Judge",
-          "date": "November 21st"
+          "date": "November 21st",
+          "category": "Academic Programming"
         },
         {
           "title": "Loyola Marymount University College of Business Administration Hilton Distinguished Entrepreneur Lecture Series Speaker Event and Dinner",
           "role": "Invited Guest",
-          "date": "November 18th"
+          "date": "November 18th",
+          "category": "Industry Event"
         },
         {
           "title": "Orange County Schools of Performing Arts Preview Day",
           "role": "Community Attendee",
-          "date": "November 2nd"
+          "date": "November 2nd",
+          "category": "Community Event"
         },
         {
           "title": "Loyola Marymount University Career and Professional Development Seattle Career Trek",
           "role": "Seaver College of Science and Engineering Representative",
-          "date": "October 9th - 11th"
+          "date": "October 9th - 11th",
+          "category": "University Programming"
         }
       ]
     }
