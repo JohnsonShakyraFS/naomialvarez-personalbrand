@@ -17,10 +17,22 @@ fetch("data/posts.json")
 
     literatureContainer.innerHTML = posts
       .map((post) => {
-        const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric"
+        function formatMonthYear(dateValue) {
+  if (!dateValue) return "";
+
+  const parsedDate = new Date(dateValue);
+
+  if (!isNaN(parsedDate)) {
+    return parsedDate.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  return dateValue;
+}
+
+const formattedDate = formatMonthYear(post.date);
         });
 
         return `
