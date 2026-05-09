@@ -238,6 +238,8 @@ fetch("../data/posts.json")
            BACK LINK
       ================================= -->
 
+      <p>Full paper and additional materials are available upon request. Please feel free to reach out regarding research interests, collaboration opportunities, or access to complete manuscripts.<p>
+
       <a href="../literature.html" class="text-link">
         ← Back to Literature
       </a>
