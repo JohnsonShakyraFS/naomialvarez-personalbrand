@@ -498,12 +498,12 @@ img {
   border-top: 1px solid var(--border);
 }
 
-.testimonials-list .testimonial-item:last-child {
-  border-bottom: none;
-}
-
 .testimonial-item {
   border-bottom: 1px solid var(--border);
+}
+
+.testimonials-list .testimonial-item:last-child {
+  border-bottom: none;
 }
 
 /* ================================
@@ -514,19 +514,14 @@ img {
   list-style: none;
   cursor: pointer;
 
-  padding: 28px 0;
+  padding: 32px 0;
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
 
   color: var(--black);
-
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 
   transition: 0.28s ease;
 }
@@ -536,17 +531,55 @@ img {
 }
 
 .testimonial-item summary:hover {
-  color: var(--accent);
   padding-left: 12px;
 }
 
-.testimonial-item summary span:last-child {
+.testimonial-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testimonial-summary-text strong {
+  color: var(--black);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.testimonial-summary-text em {
+  color: var(--black);
+
+  font-family: var(--heading-font);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-style: normal;
+  font-weight: 500;
+
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+
+  max-width: 850px;
+}
+
+.testimonial-item summary:hover .testimonial-summary-text strong,
+.testimonial-item summary:hover .testimonial-summary-text em {
+  color: var(--accent);
+}
+
+.testimonial-toggle {
   color: var(--accent);
   font-size: 1.4rem;
+  line-height: 1;
   transition: 0.28s ease;
 }
 
-.testimonial-item[open] summary span:last-child {
+.testimonial-item[open] .testimonial-toggle {
   transform: rotate(45deg);
 }
 
@@ -569,22 +602,6 @@ img {
   text-transform: uppercase;
 
   margin-bottom: 22px;
-}
-
-.testimonial-highlight {
-  font-family: var(--heading-font);
-
-  color: var(--black);
-
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 500;
-
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-
-  margin-bottom: 26px;
-
-  max-width: 850px;
 }
 
 .testimonial-content blockquote {
@@ -1845,6 +1862,17 @@ li {
   .research-detail-row {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .testimonial-content {
+    padding-left: 28px;
+    margin-left: 10px;
+  }
+
+  .testimonial-item summary {
+    gap: 20px;
   }
 }
 
