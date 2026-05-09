@@ -1,3 +1,16 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "abstract": "My work introduces the mathematical foundations and interpretations of the Lorenz curve and Gini coefficient, using illustrative examples and derivations to demonstrate how income inequality is quantified. It concludes by examining the interpretation, visualization, and broader regulatory, economic, and humanitarian applications of these measures, particularly in informing fiscal policy, labor analysis, resource allocation, and social welfare initiatives.",
+      "affiliations": "Loyola Marymount University",
+      "authors": "Naomi Alvarado",
+      "keywords": " Lorenz Curve, Gini Coefficient, Income Inequality, Economic Disparity, Income Distribution, Applied Statistics, Quantitative Economics, Statistical Modeling, Economic Policy, Socioeconomic Analysis, Data Visualization, Social Equity, Regulatory Analysis, Economic Equity, Public Policy Analytics",
+      "slug": "analyzing-income-distribution-through-the-lorenz-curve-and-gini-coefficient",
+      "date": "Mary 2024",
+      "status": "Independent Methodological Economic Analysis, Technical Expository Paper",
+      "title": "Analyzing Income Distribution Through the Lorenz Curve and Gini Coefficient",
+      "introduction": "Income inequality remains one of the most widely discussed socioeconomic issues in both public discourse and academic research. Media outlets such as The New York Times, Forbes, and The Wall Street Journal frequently publish analyses of global wealth rankings, gross domestic product (GDP), projected industry growth, and patterns of economic development. In recent years, public attention has also expanded toward visual comparisons of inflation, wage stagnation, and purchasing power. Despite the prominence of these discussions, income distribution itself is often underrepresented in mainstream economic narratives, particularly in rigorous statistical analysis and quantitative measurement. \n\nThe Lorenz curve and the Gini coefficient serve as foundational statistical tools for analyzing income distribution and quantifying economic inequality within populations. These measures provide a structured framework for evaluating how income is distributed across socioeconomic groups and for identifying the magnitude of inequality within an economic system. While broader indicators such as aggregate wealth and net worth remain essential in assessing economic conditions, income-based analysis offers a more precise method for identifying structural disparities, statistical outliers, and the factors influencing economic outcomes among specific demographic and social subpopulations. \n",
+      "tools": "R, LaTeX"
+    }
+  ]
 }
