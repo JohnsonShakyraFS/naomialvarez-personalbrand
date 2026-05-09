@@ -1151,7 +1151,7 @@ img {
 }
 
 /* ================================
-   RESEARCH POST PAGE
+   LITERATURE PAGE
 ================================ */
 
 .research-post {
@@ -1264,6 +1264,77 @@ img {
   margin-left: 10px;
   color: var(--accent);
 }
+
+/* ================================
+   RESEARCH BACK BUTTON
+================================ */
+/* ================================
+   TEXT LINKS
+================================ */
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 72px;
+  padding: 14px 26px;
+  background: var(--accent);
+  color: var(--white);
+  border: 1px solid var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.28s ease;
+}
+
+.text-link:hover {
+  background: var(--black);
+  border-color: var(--black);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.12);
+}
+
+.research-post a.text-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 72px !important;
+
+  padding: 14px 26px;
+
+  background: var(--accent);
+  color: var(--white);
+
+  border: 1px solid var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition: 0.28s ease;
+}
+
+.research-post a.text-link:hover {
+  background: var(--black);
+  border-color: var(--black);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.12);
+}
+
 /* ================================
    FOOTER
 ================================ */
