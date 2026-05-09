@@ -134,3 +134,33 @@ collections:
                     widget: "string"
                     required: false
                     hint: "Example: Long Beach, CA"
+
+      # ================================
+      # RECENT ENGAGEMENTS
+      # ================================
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "data/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - label: "Dropdown Header / Name"
+                name: "name"
+                widget: "string"
+
+              - label: "Role / Affiliation"
+                name: "role"
+                widget: "string"
+                required: false
+
+              - label: "Short Highlight Quote"
+                name: "highlight"
+                widget: "text"
+                required: false
+
+              - label: "Full Testimonial"
+                name: "content"
+                widget: "text"
