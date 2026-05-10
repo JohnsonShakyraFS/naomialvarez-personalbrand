@@ -1197,6 +1197,17 @@ img {
   font-size: 1.08rem;
 }
 
+.contact-detail a {
+  border: 1px solid var(--gray);
+  padding: 15px;
+}
+
+.contact-detail a:hover {
+  background-color: var(--gray);
+  color: white;
+  transition: 0.3s ease
+}
+
 .contact-detail strong {
   display: block;
   color: var(--accent);
